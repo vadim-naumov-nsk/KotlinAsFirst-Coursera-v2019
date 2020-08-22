@@ -84,7 +84,6 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double {
 //округляем до целого и переводим в метры
     return 0.01*totalvershoks.roundToLong()
 }
-
 /**
  * Тривиальная
  *
@@ -169,3 +168,4 @@ fun numberRevert(number: Int): Int {
     SNR=SN.reversed()       //формируем инвертированную строку
     return SNR.toInt()      //превращаем строку в число
 }
+//that's all
