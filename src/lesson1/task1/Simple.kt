@@ -52,12 +52,16 @@ fun main() {
 //    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
 //    println("Root product: $x1x2")
     println("Task1: fun seconds(8,20,35) "+seconds(8, 20, 35))
+
     println("Task1: fun lengthInMeters(8,2,11) "+lengthInMeters(8,2,11))
+//    println("Task1: fun lengthInMeters(8,2,11) "+lengthInMeters(0,0,1))
+
     println("Task1: fun angleInRadian(36,14,35) "+angleInRadian(36,14,35))
     println("Task1: fun trackLength(3, 0,0, 4) "+trackLength(3.0, 0.0,0.0, 4.0))
     println("Task1: fun thirdDigit(3801) "+thirdDigit(3801))
     println("Task1: fun travelMinutes(9, 25,13, 1) "+travelMinutes(9, 25,13, 1))
-    println("Task1: fun accountInThreeYears(100,10) "+accountInThreeYears(100,10))
+    println("Task1: fun accountInThreeYears(100,10) "+accountInThreeYears(1,1))
+//    println("Task1: fun accountInThreeYears(1,1) "+accountInThreeYears(1,1))
     println("Task1: fun numberRevert(874) "+numberRevert(874))
 }
 
@@ -82,7 +86,8 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double {
 //вычисляем длину в сантиметрах
     val totalvershoks=4.445*(48*sagenes+16*arshins+vershoks)
 //округляем до целого и переводим в метры
-    return 0.01*totalvershoks.roundToLong()
+    //return 0.01*totalvershoks.roundToLong()
+    return 0.01*totalvershoks
 }
 /**
  * Тривиальная
@@ -150,7 +155,8 @@ fun accountInThreeYears(initial: Int, percent: Int): Double {
     sum1=initial*(1+0.01*percent)   //суммма на конец первого года
     sum2=sum1*(1+0.01*percent)       //суммма на конец второго года
     sum3=sum2*(1+0.01*percent)     //суммма на конец третего года
-    return 0.01*(100*sum3).toLong() //приводим к 2 знакам после запятой
+//    return 0.01*(100*sum3).toLong() //приводим к 2 знакам после запятой
+    return sum3   //приводим к 2 знакам после запятой
 
 }
 
